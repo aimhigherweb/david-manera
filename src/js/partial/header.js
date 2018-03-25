@@ -29,6 +29,7 @@ export class Header extends React.Component {
 		return (
 			<div className="inner">
 				<SiteTitle />
+				<a href="#content">Skip to content</a>
 				<MainMenu />
 				<ContactInfo />
 			</div>
@@ -38,7 +39,7 @@ export class Header extends React.Component {
 
 const SiteTitle = () => (
 	<div className="site-logo">
-		<a aria-label="Logo linked to homepage" href="#home">
+		<a aria-label="Logo linked to homepage" title="Logo for David Manera - Criminal Lawyer" href="#content">
 			<ReactSVG path={SiteLogo} />
 		</a>
 	</div>
@@ -66,8 +67,6 @@ class MainMenu extends React.Component {
 
 		return (
 			<nav id="nav-main" className="menu main">
-				<a className="hamburger" onClick={this.mobileMenu}>
-				</a>
 				<ul>{navItems}</ul>
 			</nav>
 		);
@@ -76,19 +75,19 @@ class MainMenu extends React.Component {
 
 const ContactInfo = () => (
 	<div className="contact-info">
-		<a href="tel:+61892212203" target="_blank">
+		<a href="tel:+61892212203" title="Link to contact phone number, will open in new window" target="_blank">
 			<Phone />
 			<span>08 9221 2203</span>
 		</a>
-		<a href="tel:+61419945411" target="_blank">
+		<a href="tel:+61419945411" title="Link to contact mobile number, will open in new window" target="_blank">
 			<Smartphone />
 			<span>0419 945 411</span>
 		</a>
-		<a href="fax:+61892212538" target="_blank">
+		<a href="fax:+61892212538" title="Link to contact fax number, will open in new window" target="_blank">
 			<Smartphone />
 			<span>08 9221 2538</span>
 		</a>
-		<a href="https://goo.gl/maps/MLgLZnpJ3kq" target="_blank">
+		<a href="https://goo.gl/maps/MLgLZnpJ3kq" title="Link to Google Maps listing of office address, will open in new window" target="_blank">
 			<Map />
 			<address>
 				3rd Floor, 524 Hay ST<br/>

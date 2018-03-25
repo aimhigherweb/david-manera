@@ -4,6 +4,8 @@ import { Helmet } from 'react-helmet';
 //Resources
 // import '../../scss/layouts/home.scss';
 import Profile from '../../img/profile_david.jpeg';
+import CourtSupreme from '../../img/court_supreme.jpg';
+import CourtDistrict from '../../img/court_district.jpg';
 
 class Meta extends Component {
 	render() {
@@ -35,7 +37,7 @@ class Meta extends Component {
 export class Home extends Component {
 	render() {
 		return (
-			<div className="content main">
+			<div id="content" className="content main">
 				<Hero />
 				<About />
 				<Services />
@@ -47,7 +49,9 @@ export class Home extends Component {
 
 const Hero = () => (
 	<div id="home" className="hero">
-		<div className="image-container hero"></div>
+		<div className="image-container hero">
+			<img src={CourtSupreme} alt="Image of the front of the Supreme Court building in Perth, WA. Includes sign at the front and part of the Supreme Court Gardens." />
+		</div>
 		<div className="headline">
 			<blockquote>
 				David Manera is a Perth based lawyer specialising in criminal law and practices throughout Western Australia
@@ -98,7 +102,9 @@ const Services = () => (
 				<li>Bail Applications</li>
 			</ul>
 		</div>
-		<div className="image-container"></div>
+		<div className="image-container">
+			<img src={CourtDistrict} alt="Image of the front of the District Court building in Perth, WA." />
+		</div>
 	</div>
 );
 
@@ -109,12 +115,16 @@ const Contact = () => (
 		</div>
 		<div className="form">
 			<h2>Contact David</h2>
-			<form name="contact" method="POST" netlify="true">
+			<form name="contact" method="POST" >
 				<input type="hidden" name="form-name" value="contact-html" />
-				<input type="text" name="name" placeholder="Name" />
-				<input type="text" name="phone" placeholder="Phone" />
-				<input type="email" name="email" placeholder="Email" />
-				<textarea name="message"></textarea>
+				<label htmlFor="name">Name</label>
+				<input if="name" type="text" name="name" placeholder="Name" />
+				<label htmlFor="phone">Phone</label>
+				<input id="phone" type="text" name="phone" placeholder="Phone" />
+				<label htmlFor="email">Email</label>
+				<input id="email" type="email" name="email" placeholder="Email" />
+				<label htmlFor="message">Message</label>
+				<textarea id="message" name="message"></textarea>
 				<button type="submit">Submit</button>
 			</form>
 		</div>
