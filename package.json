@@ -1,11 +1,11 @@
 {
-	"name": "starter-react",
+	"name": "david-manera",
 	"version": "2.0.0",
-	"description": "React Starter Kit for AimHigher Web Design",
+	"description": "Static React website from AimHigher's React Starter kit",
 	"main": "index.js",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/AimHigher-Web-Design/starter-kit-react.git"
+		"url": "git@github.com:amykapernick/david-manera.git"
 	},
 	"scripts": {
 		"start": "parcel ./index.html -p 3500",
@@ -14,9 +14,9 @@
 	"author": "AimHigher Web Design",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/AimHigher-Web-Design/starter-kit-react/issues"
+		"url": "https://github.com/AimHigher-Web-Design/david-manera/issues"
 	},
-	"homepage": "https://github.com/AimHigher-Web-Design/starter-kit-react#readme",
+	"homepage": "https://github.com/AimHigher-Web-Design/david-manera#readme",
 	"dependencies": {
 		"node-sass": "^4.7.2",
 		"react": "^16.2.0",

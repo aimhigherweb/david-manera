@@ -1,6 +1,6 @@
-# Starter Kit - React
+# David Manera - Criminal Lawyer
 
-This is the AimHigher Web Design starter kit for React websites
+This is built from the AimHigher Web Design starter kit for React websites
 
 - React
 - Parcel.js builder

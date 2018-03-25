@@ -1,14 +1,9 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import ReactSVG from 'react-svg';
-
-//Components
-import { App, menuItems } from './app.js';
 
 //Resources
-import Logo from '../../img/logo.svg';
-import { Menu } from 'react-feather';
 import '../../scss/partials/header.scss';
+
+const menuItems = [];
 
 export class Header extends React.Component {
 	render() {
@@ -24,7 +19,6 @@ export class Header extends React.Component {
 const SiteTitle = (logo) => (
 	<div className="site-logo">
 		<a aria-label="Logo linked to homepage" href="/">
-			<ReactSVG path={Logo} />
 		</a>
 	</div>
 );
@@ -42,18 +36,17 @@ class MainMenu extends React.Component {
 		let navItems = menuItems.map((navItem) => {
 			return (
 				<li key={navItem.title} className={'' + navItem.class}>
-					<NavLink to={navItem.slug} activeClassName="current">
+					<a href={navItem.slug}>
 						{navItem.title}
-					</NavLink>
+					</a>
 				</li>
 			);
 		});
 
 		return (
 			<nav id="nav-main" className="menu main">
-				<button className="hamburger" onClick={this.mobileMenu}>
-					<Menu />
-				</button>
+				<a className="hamburger" onClick={this.mobileMenu}>
+				</a>
 				<ul>{navItems}</ul>
 			</nav>
 		);

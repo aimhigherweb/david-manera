@@ -1,26 +1,12 @@
 import React, { Component, Fragment } from 'react';
-import { Route, Switch } from 'react-router-dom';
 import Helmet from 'react-helmet';
 
 //Resources
-import '../../scss/content.scss';
+// import '../../scss/content.scss';
 import favicons from '../../img/favicons/*';
 
 //Components
 import { Home } from '../layouts/home.js';
-
-
-// Variables
-export const menuItems = [
-	{
-		slug: '/',
-		title: 'Home',
-		component: () => <Home />,
-		class: 'hidden',
-	},
-];
-
-const routeItems = menuItems;
 
 class Meta extends Component {
 	render() {
@@ -41,22 +27,8 @@ class Meta extends Component {
 
 export class App extends Component {
 	render() {
-		let pages = routeItems.map((page) => {
-			return (
-				<Route
-					exact
-					path={page.slug}
-					component={page.component}
-					key={page.slug}
-				/>
-			);
-		});
-
 		return (
-			<div className="container">
-				<Meta />
-				<Switch>{pages}</Switch>
-			</div>
+			<Home />
 		);
 	}
 }
