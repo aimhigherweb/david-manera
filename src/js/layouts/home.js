@@ -109,7 +109,7 @@ const Contact = () => (
 		</div>
 		<div className="form">
 			<h2>Contact David</h2>
-			<form name="contact" method="POST" netlify>
+			<form name="contact" method="POST" netlify="true">
 				<input type="text" name="name" placeholder="Name" />
 				<input type="text" name="phone" placeholder="Phone" />
 				<input type="email" name="email" placeholder="Email" />
