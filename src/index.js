@@ -6,7 +6,7 @@ import { Header } from './js/partial/header.js';
 import { App } from './js/partial/app.js';
 
 //Resources
-// import './scss/global.scss';
+import './scss/global.scss';
 
 class Main extends React.Component {
 	render() {

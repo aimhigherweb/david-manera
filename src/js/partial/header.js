@@ -3,7 +3,7 @@ import ReactSVG from 'react-svg';
 
 //Resources
 import '../../scss/partials/header.scss';
-import Logo from '../../img/logo.svg';
+import SiteLogo from '../../img/logo.svg';
 import {Phone, Smartphone, Map} from 'react-feather';
 
 const menuItems = [
@@ -39,7 +39,7 @@ export class Header extends React.Component {
 const SiteTitle = () => (
 	<div className="site-logo">
 		<a aria-label="Logo linked to homepage" href="#home">
-			<ReactSVG path={Logo} />
+			<ReactSVG path={SiteLogo} />
 		</a>
 	</div>
 );
