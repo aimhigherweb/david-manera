@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { Helmet } from 'react-helmet';
 
 //Resources
-// import '../../scss/layouts/home.scss';
+import '../../scss/layouts/home.scss';
 import Profile from '../../img/profile_david.jpeg';
 import CourtSupreme from '../../img/court_supreme.jpg';
 import CourtDistrict from '../../img/court_district.jpg';

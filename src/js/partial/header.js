@@ -4,7 +4,7 @@ import ReactSVG from 'react-svg';
 //Resources
 import '../../scss/partials/header.scss';
 import SiteLogo from '../../img/logo.svg';
-import {Phone, Smartphone, Map} from 'react-feather';
+import {Phone, Smartphone, Printer, Map} from 'react-feather';
 
 const menuItems = [
 	{
@@ -29,7 +29,7 @@ export class Header extends React.Component {
 		return (
 			<div className="inner">
 				<SiteTitle />
-				<a href="#content">Skip to content</a>
+				<a href="#content" className="sr">Skip to content</a>
 				<MainMenu />
 				<ContactInfo />
 			</div>
@@ -76,21 +76,21 @@ class MainMenu extends React.Component {
 const ContactInfo = () => (
 	<div className="contact-info">
 		<a href="tel:+61892212203" title="Link to contact phone number, will open in new window" target="_blank">
-			<Phone />
+			<Phone className="icon" />
 			<span>08 9221 2203</span>
 		</a>
 		<a href="tel:+61419945411" title="Link to contact mobile number, will open in new window" target="_blank">
-			<Smartphone />
+			<Smartphone className="icon" />
 			<span>0419 945 411</span>
 		</a>
 		<a href="fax:+61892212538" title="Link to contact fax number, will open in new window" target="_blank">
-			<Smartphone />
+			<Printer className="icon" />
 			<span>08 9221 2538</span>
 		</a>
 		<a href="https://goo.gl/maps/MLgLZnpJ3kq" title="Link to Google Maps listing of office address, will open in new window" target="_blank">
-			<Map />
+			<Map className="icon map" />
 			<address>
-				3rd Floor, 524 Hay ST<br/>
+				524 Hay ST<br/>
 				Perth, WA, 6000
 			</address>
 		</a>

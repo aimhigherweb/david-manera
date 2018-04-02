@@ -1,16 +1,85 @@
 @import '../variables.scss';
 
 header {
-	background: rgba(#fff, 0.7);
-	width: 100%;
+	background: $white;
+	border-left: 3px solid $navy;
+	padding: 50px 20px;
+	position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+	width: $sidebar_full;
 	z-index: 20;
+
+	nav {
+		ul, li {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+nav {
+	margin: 20px 0;
+	text-align: center;
+	a {
+		color: $navy;
+		display: block;
+		font: $font_headings;
+		padding: 20px 0;
+		text-decoration: none;
+
+		&:active, &:hover, &:focus {
+			text-decoration: underline;
+		}
+	}
 }
 
 .site-logo {
+	width: 100%;
 
 	svg {
-		min-height: 100px;
-		max-width: 300px;
-		min-width: 100px;
+		height: auto;
+		margin: 0;
+		width: 100%;
+	}
+}
+
+.contact-info {
+	--icon-colour: #{$navy_light_75};
+	--icon-size: 20px;
+
+	display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		flex-direction: column;
+	position: absolute;
+		bottom: 10px;
+		right: 20px;
+	text-align: right;
+
+	a {
+		border-left: 2px solid transparent;
+		color: var(--icon-colour);
+		display: flex;
+			align-items: center;
+		font-weight: bolder;
+		margin: 5px 0;
+		padding: 5px 0;
+		text-decoration: none;
+
+		&:active, &:hover, &:focus {
+			--icon-colour: #{$navy};
+			border-color: var(--icon-colour);
+		}
+	}
+
+	address {
+		display: inline-block;
+	}
+
+	svg {
+		margin: 0 10px 0;
 	}
 }

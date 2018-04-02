@@ -5,41 +5,33 @@ $font_bold: 700 1em Arial, sans-serif;
 $font_headings: 700 1.5em Arial, sans-serif;
 
 //Colours
-$blue: #1c75bc;
-  $blue_light_90: #3283c3;
-  $blue_light_75: #5598cd;
-  $blue_light_50: #8dbadd;
-  $blue_light_25: #c6dcee;
-  $blue_light_10: #e8f1f8;
+$navy:#000060;
+    $navy_light_10:#e6e6ef;
+    $navy_light_25:#bfbfd7;
+    $navy_light_50:#8080b0;
+    $navy_light_75:#404088;
+    $navy_light_90:#191970;
 
-  $blue_dark_90: #196aaa;
-  $blue_dark_75: #15588d;
-  $blue_dark_50: #0e3b5e;
-  $blue_dark_25: #071d2f;
-  $blue_dark_10: #030c13;
+    $navy_dark_10:#00000a;
+    $navy_dark_25:#000018;
+    $navy_dark_50:#000030;
+    $navy_dark_75:#000048;
+    $navy_dark_90:#000056;
 
-$aqua: #16a6b1;
-  $aqua_light_90: #2dafb9;
-  $aqua_light_75: #50bcc5;
-  $aqua_light_50: #8ad2d8;
-  $aqua_light_25: #c5e9eb;
-  $aqua_light_10: #e7f6f7;
+$black:#000000;
+    $black_10:#e6e6e6;
+    $black_25:#bfbfbf;
+    $black_50:#808080;
+    $black_75:#404040;
+    $black_90:#191919;
 
-  $aqua_dark_90: #1496a0;
-  $aqua_dark_75: #107c85;
-  $aqua_dark_50: #0b5359;
-  $aqua_dark_25: #062a2c;
-  $aqua_dark_10: #021112;
+$white:#ffffff;
+    $white_10:#1a1a1a;
+    $white_25:#404040;
+    $white_50:#808080;
+    $white_75:#bfbfbf;
+    $white_90:#e6e6e6;
 
-$grey: #5b5b5b;
-$grey_light_90: #6b6b6b;
-$grey_light_75: #848484;
-$grey_light_50: #adadad;
-$grey_light_25: #d6d6d6;
-$grey_light_10: #eeeeee;
 
-$grey_dark_90: #525252;
-$grey_dark_75: #444444;
-$grey_dark_50: #2e2e2e;
-$grey_dark_25: #171717;
-$grey_dark_10: #090909;
+//Values
+$sidebar_full: 20vw;
