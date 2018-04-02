@@ -3,8 +3,9 @@
 .hero {
     display: flex;
         align-items: center;
-    height: 80vh;
+    height: 400px;
     overflow: hidden;
+    position: relative;
 
     .hero-image {
         height: 100%;
@@ -32,21 +33,21 @@
     }
 
     .headline {
-        padding: 40px;
+        padding: 10px;
         max-width: 1000px;
     }
 
     h1 {
         font-variant: normal;
-        font-size: 3em;
+        font-size: 1.65em;
     }
 
     blockquote {
         border: none;
         color: $navy_light_90;
         font: $font_headings;
-        font-size: 2.5em;
-        margin: 0 0 0 20px;
+        font-size: 1.3em;
+        margin: 0;
         text-align: left;
     }
 }
@@ -55,10 +56,12 @@
     background: #fff;
     border-top: 3px solid $navy;
     display: flex;
+        flex-direction: column;
 
     .image-container {
-        flex: 1 1 200px;
-        max-height: 400px;
+        flex: 0 1 auto;
+        height: 90vw;
+            max-height: 400px;
 
         img {
             height: auto;
@@ -68,13 +71,17 @@
     }
 
     .content {
-        border-left: 3px solid $navy;
-        flex: 3 1 200px;
-        font-size: 1.2em;
+        border-top: 3px solid $navy;
+        flex: 0 1 auto;
+        font-size: 1em;
         padding: 30px;
 
         h2 {
             margin-top: 0;
+        }
+
+        ul {
+            padding-left: 15px;
         }
 
         li {
@@ -118,6 +125,67 @@
 
         form {
             margin-left: auto;
+        }
+    }
+}
+
+@media (min-width: 35rem) {
+    .about, .services {
+        flex-direction: row;
+
+        .image-container {
+            flex-grow: 1;
+        }
+
+        .content {
+            border-top: none;
+            border-left: 3px solid $navy;
+            flex-grow: 3;
+        }
+    }
+}
+
+@media (min-width: 40rem) {
+    .hero {
+        height: 80vh;
+
+        .headline {
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        blockquote {
+            font-size: 1.5em;
+            margin: 0 0 0 20px;
+        }
+    }
+
+    .about, .services {
+        .content {
+            font-size: 1.2em;
+        }
+    }
+}
+
+@media (min-width: 60rem) {
+    .hero {
+        h1 {
+            font-size: 3em;
+        }
+
+        blockquote {
+            font-size: 2.5em;
+        }
+    }
+
+    .about, .services {
+        .content {
+            ul {
+                padding-left: 40px;
+            }
         }
     }
 }

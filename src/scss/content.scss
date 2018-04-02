@@ -2,8 +2,35 @@
 
 .content {
     &.main {
-        --sidebar-full: #{$sidebar_full};
+        --sidebar: 0;
 
-        width: calc(100vw - var(--sidebar-full));
+        margin-top: 105px;
+        width: calc(100vw - var(--sidebar));
+    }
+}
+
+@media (min-width: 40rem) {
+    .content {
+        &.main {
+            --sidebar: #{$sidebar_tablet};
+
+            margin-top: 0;
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .content {
+        &.main {
+            --sidebar: #{$sidebar_full};
+        }
+    }
+}
+
+@media (min-width: 1750px) {
+    .content {
+        &.main {
+            --sidebar: 350px;
+        }
     }
 }
