@@ -97,8 +97,8 @@
     }
 
     .content {
-        border-left: none;
-        border-right: 3px solid $navy;
+        border-top: none;
+        border-bottom: 3px solid $navy;
         flex: 1 1 200px;
     }
 }
@@ -107,6 +107,7 @@
     background: #fff;
     border-top: 3px solid $navy;
     display: flex;
+        flex-direction: column;
     text-align: right;
 
     .map {
@@ -114,12 +115,13 @@
     }
 
     .form {
-        border-left: 3px solid $navy;
+        border-top: 3px solid $navy;
         flex: 1 1 200px;
         font-size: 1.2em;
-        padding: 30px 50px;
+        padding: 10px 20px;
 
         h2 {
+            font-size: 1.5em;
             margin-top: 0;
         }
 
@@ -141,6 +143,28 @@
             border-top: none;
             border-left: 3px solid $navy;
             flex-grow: 3;
+        }
+    }
+
+    .services {
+        .image-container {
+            flex-grow: 2;
+        }
+
+        .content {
+            border-left: none;
+            border-bottom: none;
+            border-right: 3px solid $navy;
+            flex-grow: 1;
+        }
+    }
+
+    .contact {
+        flex-direction: row;
+
+        .form {
+            border-top: none;
+            border-left: 3px solid $navy;
         }
     }
 }
@@ -166,6 +190,16 @@
     .about, .services {
         .content {
             font-size: 1.2em;
+        }
+    }
+
+    .contact {
+        .form {
+            padding: 30px 50px;
+
+            h2 {
+                font-size: 2em;
+            }
         }
     }
 }
