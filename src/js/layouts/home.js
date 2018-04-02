@@ -117,13 +117,13 @@ const Contact = () => (
 			<h2>Contact David</h2>
 			<form name="contact" method="POST" >
 				<input type="hidden" name="form-name" value="contact-html" />
-				<label htmlFor="name">Name</label>
+				<label htmlFor="name" className="sr">Name</label>
 				<input if="name" type="text" name="name" placeholder="Name" />
-				<label htmlFor="phone">Phone</label>
+				<label htmlFor="phone" className="sr">Phone</label>
 				<input id="phone" type="text" name="phone" placeholder="Phone" />
-				<label htmlFor="email">Email</label>
+				<label htmlFor="email" className="sr">Email</label>
 				<input id="email" type="email" name="email" placeholder="Email" />
-				<label htmlFor="message">Message</label>
+				<label htmlFor="message" className="sr">Message</label>
 				<textarea id="message" name="message"></textarea>
 				<button type="submit">Submit</button>
 			</form>

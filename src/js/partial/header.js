@@ -9,18 +9,15 @@ import {Phone, Smartphone, Printer, Map} from 'react-feather';
 const menuItems = [
 	{
 		title: 'About',
-		slug: '#about',
-		class: 'about-david'
+		slug: '#about'
 	},
 	{
 		title: 'Services',
-		slug: '#services',
-		class: 'services'
+		slug: '#services'
 	},
 	{
 		title: 'Contact',
-		slug: '#contact',
-		class: 'contact'
+		slug: '#contact'
 	},
 ];
 
@@ -57,7 +54,7 @@ class MainMenu extends React.Component {
 	render() {
 		let navItems = menuItems.map((navItem) => {
 			return (
-				<li key={navItem.title} className={'' + navItem.class}>
+				<li key={navItem.title}>
 					<a href={navItem.slug}>
 						{navItem.title}
 					</a>

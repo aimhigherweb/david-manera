@@ -113,29 +113,36 @@ form {
         margin: 0;
     }
 
-    input {
+    input, textarea {
         background: $navy_light_10;
         border: 1px solid $navy_light_75;
         color: $navy_dark_25; 
-        display: block;
+		display: block;
+		font-size: 0.9em;
         margin: 10px 0;
-        padding: 5px 10px;
+        padding: 10px 15px;
         width: 100%;
 
         &::placeholder {
             color: $navy_dark_25; 
         }
-    }
+	}
+	
+	textarea {
+		height: 150px;
+	}
 }
 
-button {
+button, .btn, input[type="submit"] {
     background: none;
     border: 2px solid $navy_dark_50;
     color: $navy_dark_50;
     cursor: pointer;
-    display: inline-block;
+	display: inline-block;
+	font-size: 1em;
     font-weight: 700;
-    margin: 10px 0;
+	margin: 10px 0;
+	padding: 5px 20px;
     text-transform: uppercase;
 
     &:active, &:hover, &:focus {

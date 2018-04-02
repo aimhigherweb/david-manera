@@ -48,7 +48,7 @@
     }
 }
 
-.about {
+.about, .services {
     background: #fff;
     border-top: 3px solid $navy;
     display: flex;
@@ -76,6 +76,45 @@
 
         li {
             margin: 10px 0;
+        }
+    }
+}
+
+.services {
+    .image-container {
+        flex: 2 1 200px;
+        max-height: unset;
+    }
+
+    .content {
+        border-left: none;
+        border-right: 3px solid $navy;
+        flex: 1 1 200px;
+    }
+}
+
+.contact {
+    background: #fff;
+    border-top: 3px solid $navy;
+    display: flex;
+    text-align: right;
+
+    .map {
+        flex: 1 1 200px;
+    }
+
+    .form {
+        border-left: 3px solid $navy;
+        flex: 1 1 200px;
+        font-size: 1.2em;
+        padding: 30px 50px;
+
+        h2 {
+            margin-top: 0;
+        }
+
+        form {
+            margin-left: auto;
         }
     }
 }
