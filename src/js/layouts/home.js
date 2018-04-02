@@ -49,13 +49,13 @@ export class Home extends Component {
 
 const Hero = () => (
 	<div id="home" className="hero">
-		<div className="image-container hero">
+		<div className="image-container hero-image">
 			<img src={CourtSupreme} alt="Image of the front of the Supreme Court building in Perth, WA. Includes sign at the front and part of the Supreme Court Gardens." />
 		</div>
 		<div className="headline">
-			<blockquote>
-				David Manera is a Perth based lawyer specialising in criminal law and practices throughout Western Australia
-			</blockquote>
+			<h1>
+				<span className="caps">David Manera</span> is a Perth based lawyer specialising in criminal law and practices throughout Western Australia
+			</h1>
 			<blockquote>
 				He has over 30 years of experience representing clients in all courts
 			</blockquote>

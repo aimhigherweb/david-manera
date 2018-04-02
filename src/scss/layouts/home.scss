@@ -1,6 +1,81 @@
 @import '../variables.scss';
 
 .hero {
-    max-height: 80vh;
+    height: 80vh;
     overflow: hidden;
+
+    .hero-image {
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+
+        img {
+            height: 100%;
+                min-height: 100%;
+            width: auto;
+                max-width: unset;
+                min-width: 100%;
+        }
+
+        &:before {
+            background: rgba($white, 0.5);
+            content: '';
+            position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+        }
+    }
+
+    .headline {
+        padding: 40px;
+        max-width: 800px;
+    }
+
+    h1 {
+        font-variant: normal;
+        font-size: 1.6em;
+    }
+
+    blockquote {
+        border: none;
+        color: $navy_light_90;
+        font: $font_headings;
+        margin: 0 0 0 20px;
+        text-align: left;
+    }
+}
+
+.about {
+    background: #fff;
+    border-top: 3px solid $navy;
+    display: flex;
+
+    .image-container {
+        flex: 1 1 200px;
+        max-height: 400px;
+
+        img {
+            height: auto;
+                max-height: unset;
+            width: 100%;
+        }
+    }
+
+    .content {
+        border-left: 3px solid $navy;
+        flex: 3 1 200px;
+        font-size: 1.2em;
+        padding: 30px;
+
+        h2 {
+            margin-top: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+    }
 }

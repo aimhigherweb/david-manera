@@ -10,7 +10,7 @@ const menuItems = [
 	{
 		title: 'About',
 		slug: '#about',
-		class: 'about'
+		class: 'about-david'
 	},
 	{
 		title: 'Services',
