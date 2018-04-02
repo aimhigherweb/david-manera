@@ -57,7 +57,7 @@ const Hero = () => (
 				<span className="caps">David Manera</span> is a Perth based lawyer with over 30 years of experience
 			</h1>
 			<blockquote>
-				David specialises in criminal law and practices throughout Western Australia	
+				David specialises in Criminal Law and practices throughout Western Australia	
 			</blockquote>
 
 		</div>
@@ -75,7 +75,7 @@ const About = () => (
 				<li>Admitted to the Supreme Court of WA in 1987</li>
 				<li>Admitted to the High Court in 1988 </li>
 				<li>Criminal Lawyer with 30 years of experience</li>
-				<li>Ex Vice-President for 10 years of <a href="https://www.visability.com.au/" target="_blank" rel="nofollow">VisAbility</a> (formerly association for the blind)</li>
+				<li>Ex Vice-President for 10 years of <a href="https://www.visability.com.au/" target="_blank" rel="nofollow">VisAbility</a> (formerly Association for the Blind)</li>
 				<li>Legal representative for <a href="https://www.pdl.org.au/" target="_blank" rel="nofollow">Pharmacy Defence Limited</a> for 10 years (the body representing retail pharmacists)</li>
 			</ul>
 		</div>
