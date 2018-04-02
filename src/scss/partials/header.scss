@@ -2,14 +2,20 @@
 
 header {
 	background: $white;
-	border-left: 3px solid $navy;
-	padding: 50px 20px;
+	border-bottom: 3px solid $navy;
+	padding: 20px 10px;
 	position: fixed;
 		top: 0;
 		right: 0;
-		bottom: 0;
-	width: $sidebar_full;
+		left: 0;
+	width: $sidebar_mobile;
 	z-index: 20;
+
+	.inner {
+		display: flex;
+			align-items: center;
+			justify-content: space-between;
+	}
 
 	nav {
 		ul, li {
@@ -20,14 +26,31 @@ header {
 	}
 }
 
+.hamburger {
+	display: block;
+
+	--icon-size: 40px;
+
+	svg {
+		margin: 0;
+	}
+
+	&.close {
+		background: #fff;
+		position: absolute;
+			top: -80px;
+			right: 10px;
+	}
+}
+
 nav {
-	margin: 20px 0;
+	margin: 10px 0;
 	text-align: center;
 	a {
 		color: $navy;
 		display: block;
 		font: $font_headings;
-		padding: 20px 0;
+		padding: 10px 0;
 		text-decoration: none;
 
 		&:active, &:hover, &:focus {
@@ -37,12 +60,17 @@ nav {
 }
 
 .site-logo {
-	width: 100%;
+	height: 65px;
+	width: auto;
+
+	div {
+		height: 100%;
+	}
 
 	svg {
-		height: auto;
+		height: 100%;
 		margin: 0;
-		width: 100%;
+		width: auto;
 	}
 }
 
@@ -54,8 +82,7 @@ nav {
 		align-items: flex-end;
 		justify-content: center;
 		flex-direction: column;
-	position: absolute;
-		bottom: 10px;
+	position: relative;
 		right: 20px;
 	text-align: right;
 
@@ -82,4 +109,77 @@ nav {
 	svg {
 		margin: 0 10px 0;
 	}
+}
+
+#menu {
+	background: #fff;
+	border-left: 3px solid $navy;
+	border-bottom: 3px solid $navy;
+	display: none;
+	position: absolute;
+		top: 108px;
+		right: 0;
+	width: 300px;
+
+	&:target {
+		display: block;
+	}
+}
+
+@media (min-width: 40rem) {
+	header {
+		border-bottom: none;
+		border-left: 3px solid $navy;
+		display: block;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: auto;
+		padding: 50px 20px;
+		width: $sidebar_full;
+			min-width: 200px;
+
+		.inner {
+			display: block;
+		}
+	}
+
+	nav {
+		margin: 20px 0;
+
+		a {
+			padding: 20px 0;
+		}
+	}
+
+	.site-logo {
+		height: auto;
+		width: 100%;
+
+		svg {
+			height: auto;
+			width: 100%;
+		}
+	}
+
+	#menu {
+		border: none;
+		display: block;
+		position: static;
+		width: auto;
+	}
+
+	.hamburger {
+		display: none;
+	}
+
+	.contact-info {
+		position: absolute;
+			bottom: 10px;
+			right: 20px;
+	}
+}
+
+@media (min-width: 60rem) {
+
 }

@@ -4,7 +4,7 @@ import ReactSVG from 'react-svg';
 //Resources
 import '../../scss/partials/header.scss';
 import SiteLogo from '../../img/logo.svg';
-import {Phone, Smartphone, Printer, Map} from 'react-feather';
+import {Phone, Smartphone, Printer, Map, Menu, X} from 'react-feather';
 
 const menuItems = [
 	{
@@ -27,8 +27,12 @@ export class Header extends React.Component {
 			<div className="inner">
 				<SiteTitle />
 				<a href="#content" className="sr">Skip to content</a>
-				<MainMenu />
-				<ContactInfo />
+				<a href="#menu" className="hamburger open"><Menu className="icon" /></a>
+				<div id="menu">
+					<a href="#" className="hamburger close"><X className="icon" /></a>
+					<MainMenu />
+					<ContactInfo />
+				</div>
 			</div>
 		);
 	}
@@ -43,14 +47,6 @@ const SiteTitle = () => (
 );
 
 class MainMenu extends React.Component {
-	mobileMenu() {
-		if (document.getElementsByClassName('main menu active').length < 1) {
-			document.getElementById('nav-main').classList.add('active');
-		} else {
-			document.getElementById('nav-main').classList.remove('active');
-		}
-	}
-
 	render() {
 		let navItems = menuItems.map((navItem) => {
 			return (
