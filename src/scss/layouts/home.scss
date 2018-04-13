@@ -149,6 +149,7 @@
     .services {
         .image-container {
             flex-grow: 2;
+            max-height: 500px;
         }
 
         .content {
