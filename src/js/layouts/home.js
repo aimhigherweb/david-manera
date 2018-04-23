@@ -55,12 +55,14 @@ const Hero = () => (
 		</div>
 		<div className="headline">
 			<h1>
-				<span className="caps">David Manera</span> is a Perth based lawyer with over 30 years of experience
+				David Manera is a Perth based lawyer specialising in Criminal Law and practices throughout Western Australia
 			</h1>
 			<blockquote>
-				David specialises in Criminal Law and practices throughout Western Australia	
+				He has over 30 years of experience representing clients in all courts.
 			</blockquote>
-
+			<blockquote>
+				David is committed to providing a professional service and achieving the best result.
+			</blockquote>
 		</div>
 	</div>
 );

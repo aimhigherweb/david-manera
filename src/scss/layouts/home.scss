@@ -1,6 +1,10 @@
 @import '../variables.scss';
 
 .hero {
+    --text-width: 95%;
+    --text-min: 280px;
+    --text-top: 20%;
+
     display: flex;
         align-items: center;
     height: 400px;
@@ -20,36 +24,38 @@
                 max-width: unset;
                 min-width: 100%;
         }
-
-        &:before {
-            background: rgba(255, 255, 255, 0.7);
-            content: '';
-            position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-            z-index: 0;
-        }
     }
 
     .headline {
-        padding: 10px;
-        max-width: 1000px;
+        background: rgba($black, 0.7);
+        background: linear-gradient(transparent, rgba($black, 0.9), $black);
+        padding: 50px 10px 10px;
+        position: absolute;
+            top: var(--text-top);
+            right: 0;
+            bottom: 0;
+            left: 0;
     }
 
     h1 {
+        color: $white;
         font-variant: normal;
-        font-size: 1.65em;
+        font-weight: 500;
+        font-size: 1.25em;
+        width: var(--text-width);
+            min-width: var(--text-min);
     }
 
     blockquote {
         border: none;
-        color: $navy_light_90;
+        color: $white;
         font: $font_headings;
-        font-size: 1.3em;
+        font-weight: normal;
+        font-size: 1em;
         margin: 0;
         text-align: left;
+        width: var(--text-width);
+            min-width: var(--text-min);
     }
 }
 
@@ -148,6 +154,15 @@
 }
 
 @media (min-width: 35rem) {
+    .hero {
+        --text-width: 100%;
+        --text-top: 40%;
+
+        blockquote {
+            font-size: 1em;
+        }
+    }
+
     .about, .services {
         flex-direction: row;
 
@@ -193,19 +208,20 @@
 
 @media (min-width: 40rem) {
     .hero {
+        --text-top: 47%;
+
         height: 80vh;
 
         .headline {
-            padding: 40px;
+            padding: 60px 20px 20px;
         }
 
         h1 {
-            font-size: 2em;
+            font-size: 1.3em;
         }
 
         blockquote {
-            font-size: 1.5em;
-            margin: 0 0 0 20px;
+            font-size: 1.1em;
         }
     }
 
@@ -232,12 +248,20 @@
 
 @media (min-width: 60rem) {
     .hero {
+        --text-min: 700px;
+        --text-width: 90%;
+        --text-top: 50%;
+
+        .headline {
+            padding: 60px 40px 40px;
+        }
+
         h1 {
-            font-size: 3em;
+            font-size: 1.6em;
         }
 
         blockquote {
-            font-size: 2.5em;
+            font-size: 1.3em;
         }
     }
 
@@ -246,6 +270,22 @@
             ul {
                 padding-left: 40px;
             }
+        }
+    }
+}
+
+@media (min-width: 100rem) {
+    .hero {
+        --text-min: 1000px;
+        --text-width: 70%;
+        --text-top: 50%;
+
+        h1 {
+            font-size: 2em;
+        }
+
+        blockquote {
+            font-size: 1.5em;
         }
     }
 }
