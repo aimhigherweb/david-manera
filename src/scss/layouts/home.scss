@@ -66,16 +66,18 @@
         flex-direction: column;
 
     .image-container {
-        
         display: flex;
+            justify-content: center;
         flex: 0 1 auto;
         height: 90vw;
             max-height: 400px;
 
         img {
-            height: auto;
+            height: 100%;
                 max-height: unset;
-            width: 100%;
+            width: auto;
+                min-width: unset;
+                max-width: unset;
         }
     }
 
@@ -167,7 +169,19 @@
         flex-direction: row;
 
         .image-container {
+            align-items: flex-end;
+            align-self: flex-end;
             flex-grow: 1;
+            flex-shrink: 0;
+
+            img {
+                height: auto;
+                width: 100%;
+            }
+
+            .img320 {
+                display: none;
+            }
         }
 
         .content {
@@ -226,6 +240,10 @@
     }
 
     .about, .services {
+        .image-container {
+            align-self: center;
+        }
+
         .content {
             font-size: 1.2em;
         }
@@ -266,6 +284,17 @@
     }
 
     .about, .services {
+        .image-container {
+            align-self: flex-end;
+            align-items: center;
+            max-height: 320px;
+            width: 25%;
+
+            .img560 {
+                display: none;
+            }
+        }
+
         .content {
             ul {
                 padding-left: 40px;
@@ -286,6 +315,13 @@
 
         blockquote {
             font-size: 1.5em;
+        }
+    }
+
+    .about {
+        .image-container {
+            max-height: 480px;
+            width: 480px;
         }
     }
 }

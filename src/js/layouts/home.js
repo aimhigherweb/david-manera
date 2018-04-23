@@ -1,9 +1,12 @@
 import React, { Component, Fragment } from 'react';
 import { Helmet } from 'react-helmet';
+import Media from 'react-media';
 
 //Resources
 import '../../scss/layouts/home.scss';
-import Profile from '../../img/profile_david.jpeg';
+import Profile from '../../img/profile_david.jpg';
+import Profile320 from '../../img/profile_david_320.jpg';
+import Profile560 from '../../img/profile_david_560.jpg';
 import CourtSupreme from '../../img/court_supreme.jpg';
 import CourtDistrict from '../../img/court_district.jpg';
 import CourtCentral from '../../img/court_central.jpg';
@@ -70,7 +73,15 @@ const Hero = () => (
 const About = () => (
 	<div id="about" className="about">
 		<div className="image-container">
-			<img src={Profile} alt="Profile Image of David Manera" />
+			<Media query="(max-width: 35rem)">
+				<img src={Profile320} className="img320" alt="Profile Image of David Manera" />
+			</Media>
+			<Media query="(min-width: 35rem) and (max-width: 60rem)">
+				<img src={Profile560} className="img560" alt="Profile Image of David Manera" />
+			</Media>
+			<Media query="(min-width: 60rem)">
+				<img src={Profile} classN alt="Profile Image of David Manera" />
+			</Media>
 		</div>
 		<div className="content">
 			<h2>About David</h2>
