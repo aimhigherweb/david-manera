@@ -5,6 +5,7 @@
         --sidebar: 0;
 
         margin-top: 105px;
+        overflow: hidden;
         width: calc(100vw - var(--sidebar));
     }
 }

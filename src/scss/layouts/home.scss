@@ -106,8 +106,17 @@
     background: #878B94;
 
     .image-container {
-        flex: 2 1 200px;
-        max-height: unset;
+        $ratio: 380 / 560;
+        $width: 100vw;
+
+        flex: 2 1 auto;
+        height: calc(#{$width} * #{$ratio});
+            max-height: unset;
+        width: $width;
+
+        img {
+            width: 100%;
+        }
     }
 
     .content {
@@ -128,14 +137,20 @@
         $ratio: 3893 / 6655;
         $width: 100vw;
 
-        border-bottom: 3px solid $navy;
+        border-top: 3px solid $navy;
         height: calc(#{$width} * #{$ratio});
             max-height: 95vh;
         width: $width;
     }
 
     .map {
+        background: #e8e8e8;
         flex: 1 1 200px;
+
+        iframe {
+            height: 100%;
+                min-height: 200px;
+        }
     }
 
     .form {
@@ -193,8 +208,11 @@
 
     .services {
         .image-container {
+            align-items: center;
+            align-self: center;
             flex-grow: 2;
             max-height: 500px;
+            width: 45%;
         }
 
         .content {
@@ -298,6 +316,21 @@
         .content {
             ul {
                 padding-left: 40px;
+            }
+        }
+    }
+
+    .services {
+        .image-container {
+            align-self: center;
+            justify-content: flex-end;
+            height: 520px;
+                max-height: unset;
+            max-width: 761px;
+
+            img {
+                height: 100%;
+                width: auto;
             }
         }
     }

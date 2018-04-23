@@ -10,6 +10,8 @@ import Profile560 from '../../img/profile_david_560.jpg';
 import CourtSupreme from '../../img/court_supreme.jpg';
 import CourtDistrict from '../../img/court_district.jpg';
 import CourtCentral from '../../img/court_central.jpg';
+import CourtCentral320 from '../../img/court_central_320.jpg';
+import CourtCentral560 from '../../img/court_central_560.jpg';
 
 class Meta extends Component {
 	render() {
@@ -116,16 +118,21 @@ const Services = () => (
 			</ul>
 		</div>
 		<div className="image-container">
-			<img src={CourtCentral} alt="Image of the front of the Central Law Courts in Perth, WA." />
+			<Media query="(max-width: 35rem)">
+				<img src={CourtCentral320} className="img320" alt="Image of the front of the Central Law Courts in Perth, WA." />
+			</Media>
+			<Media query="(min-width: 35rem) and (max-width: 60rem)">
+				<img src={CourtCentral560} className="img560" alt="Image of the front of the Central Law Courts in Perth, WA." />
+			</Media>
+			<Media query="(min-width: 60rem)">
+				<img src={CourtCentral} alt="Image of the front of the Central Law Courts in Perth, WA." />
+			</Media>
 		</div>
 	</div>
 );
 
 const Contact = () => (
 	<div id="contact" className="contact">
-		<div className="image-container">
-			<img src={CourtDistrict} alt="Image of the front of the District Court building in Perth, WA." />
-		</div>
 		<div className="map">
 			<iframe src="https://snazzymaps.com/embed/59209" width="100%" height="100%"></iframe>
 		</div>
@@ -143,6 +150,9 @@ const Contact = () => (
 				<textarea id="message" name="message"></textarea>
 				<button type="submit">Submit</button>
 			</form>
+		</div>
+		<div className="image-container">
+			<img src={CourtDistrict} alt="Image of the front of the District Court building in Perth, WA." />
 		</div>
 	</div>
 );
