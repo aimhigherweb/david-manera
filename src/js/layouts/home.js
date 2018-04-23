@@ -6,6 +6,7 @@ import '../../scss/layouts/home.scss';
 import Profile from '../../img/profile_david.jpeg';
 import CourtSupreme from '../../img/court_supreme.jpg';
 import CourtDistrict from '../../img/court_district.jpg';
+import CourtCentral from '../../img/court_central.jpg';
 
 class Meta extends Component {
 	render() {
@@ -102,13 +103,16 @@ const Services = () => (
 			</ul>
 		</div>
 		<div className="image-container">
-			<img src={CourtDistrict} alt="Image of the front of the District Court building in Perth, WA." />
+			<img src={CourtCentral} alt="Image of the front of the Central Law Courts in Perth, WA." />
 		</div>
 	</div>
 );
 
 const Contact = () => (
 	<div id="contact" className="contact">
+		<div className="image-container">
+			<img src={CourtDistrict} alt="Image of the front of the District Court building in Perth, WA." />
+		</div>
 		<div className="map">
 			<iframe src="https://snazzymaps.com/embed/59209" width="100%" height="100%"></iframe>
 		</div>

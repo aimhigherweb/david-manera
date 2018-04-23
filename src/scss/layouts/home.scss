@@ -22,13 +22,14 @@
         }
 
         &:before {
-            background: rgba($white, 0.7);
+            background: rgba(255, 255, 255, 0.7);
             content: '';
             position: absolute;
                 top: 0;
                 right: 0;
                 bottom: 0;
                 left: 0;
+            z-index: 0;
         }
     }
 
@@ -53,12 +54,14 @@
 }
 
 .about, .services {
-    background: #fff;
+    background: #B1CBE4;
     border-top: 3px solid $navy;
     display: flex;
         flex-direction: column;
 
     .image-container {
+        
+        display: flex;
         flex: 0 1 auto;
         height: 90vw;
             max-height: 400px;
@@ -71,6 +74,7 @@
     }
 
     .content {
+        background: #fff;
         border-top: 3px solid $navy;
         flex: 0 1 auto;
         font-size: 1em;
@@ -91,6 +95,8 @@
 }
 
 .services {
+    background: #878B94;
+    
     .image-container {
         flex: 2 1 200px;
         max-height: unset;
