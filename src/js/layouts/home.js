@@ -62,12 +62,6 @@ const Hero = () => (
 			<h1>
 				David Manera is a Perth based lawyer specialising in Criminal Law and practices throughout Western Australia
 			</h1>
-			<blockquote>
-				He has over 30 years of experience representing clients in all courts.
-			</blockquote>
-			<blockquote>
-				David is committed to providing a professional service and achieving the best result.
-			</blockquote>
 		</div>
 	</div>
 );
@@ -87,6 +81,7 @@ const About = () => (
 		</div>
 		<div className="content">
 			<h2>About David</h2>
+			<p>David has over 30 years of experience representing clients in all courts. He is committed to providing a professional service and achieving the best result.</p>
 			<ul>
 				<li>Admitted to the Supreme Court of WA in 1987</li>
 				<li>Admitted to the High Court in 1988 </li>
