@@ -139,7 +139,7 @@
 
         border-top: 3px solid $navy;
         height: calc(#{$width} * #{$ratio});
-            max-height: 95vh;
+            max-height: 70vh;
         width: $width;
     }
 
@@ -286,14 +286,14 @@
     .hero {
         --text-min: 700px;
         --text-width: 90%;
-        --text-top: 75%;
+        --text-top: 70%;
 
         .headline {
             padding: 60px 40px 40px;
         }
 
         h1 {
-            font-size: 1.6em;
+            font-size: 2.5em;
         }
 
         blockquote {
@@ -338,12 +338,12 @@
 
 @media (min-width: 100rem) {
     .hero {
-        --text-min: 1000px;
+        --text-min: 1200px;
         --text-width: 70%;
-        --text-top: 76%;
+        --text-top: 75%;
 
         h1 {
-            font-size: 2.2em;
+            font-size: 2.8em;
         }
 
         blockquote {
