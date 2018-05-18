@@ -12,8 +12,10 @@ export class Footer extends React.Component {
 		return (
 			<footer>
 				<img src={Profile} />
-				<ContactInfo />
-				<small>Robert Dickerson/"Legal Eagles" - © Jennifer Dickerson/Copyright Agency, 2018</small>
+				<div className="inner">
+					<ContactInfo />
+					<small>Robert Dickerson/"Legal Eagles" - © Jennifer Dickerson/Copyright Agency, 2018</small>
+				</div>
 			</footer>
 		);
 	}
