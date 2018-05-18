@@ -1,66 +1,56 @@
 @import 'variables.scss';
 
+@font-face {
+    font-family: 'Slab';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Slabo27px-Regular.ttf') format('truetype');
+}
+
 * {
 	box-sizing: border-box;
 }
 
 body {
-	--icon-colour: #{$navy_light_75};
-	--icon-size: 30px;
-
-	color: $black_light_90;
+	color: $grey_dark;
 	font: $font_regular;
 	line-height: 1.3;
 	margin: 0;
 }
 
+h1, h2, h3, h4, h5 {
+    color: $grey_dark;
+    font: $font_headings;
+    text-align: center;
+}
+
 h1 {
-    color: $navy_dark_50;
-    font-family: Arial, sans-serif;
-	font-size: 2.5em;
-    text-align: left;
+    color: #000;
+    font-size: 2em;
+    padding: 0 10px;
 }
 
 h2 {
-    color: $navy_dark_50;
-    font-family: Arial, sans-serif;
-	font-size: 1.5em;
-}
-
-h3 {
-    color: $navy_dark_75;
-    font-family: Arial, sans-serif;
-	font-size: 1.8em;
-}
-
-h4 {
-    color: $navy_dark_25;
-    font-family: Arial, sans-serif;
-    font-size: 1.3em;
-    margin-bottom: 0.5em;
-}
-
-h5 {
-    color: $navy_dark_25;
-    font-family: Arial, sans-serif;
-    font-size: 1.2em;
-    margin-bottom: 0.5em;
+    color: $grey_light;
+    font-size: 1.5em;
+    margin-top: 0;
 }
 
 a {
-	color: $navy_light_90;
+	color: $purple;
 
 	&:active, &:hover, &:focus {
-		color: $navy_dark_50;
+		color: $grey_dark;
 	}
 }
 
 blockquote {
     border: none;
-        border-right: 4px solid $navy_light_90;
-    color: $navy_dark_75;
-    padding: 10px 10px 10px 5px;
-    text-align: right;
+    color: $grey_dark;
+    font: $font_headings;
+    font-size: 1.2em;
+    margin: 0.1em 10px;
+    text-align: center;
 }
 
 ul {
@@ -68,7 +58,12 @@ ul {
     padding-left: 40px;
 
     li {
+        color: $purple;
         list-style-type: disc;
+
+        span {
+            color: $grey_dark;
+        }
     }
 }
 
@@ -81,39 +76,39 @@ ol {
 }
 
 hr {
-    border-color: $navy_light_50;
+    border-color: $grey_dark;
 }
 
 figcaption {
     border: none;
-        border-left: 3px solid $navy_light_90;
-    color: $navy_dark_90;
+        border-left: 3px solid $purple;
+    color: $grey_dark;
     padding: 5px 5px 5px 10px;
     text-align: left;
 }
 
 .icon {
     cursor: pointer;
-    height: var(--icon-size);
-    margin: 20px;
-    stroke: var(--icon-colour);
-    width: var(--icon-size);
+    height: $icon-size;
+    margin: 10px;
+    stroke: $grey_dark;
+    width: $icon-size;
 }
 
 form {
-    border: 1px solid $navy_light_50;
-    padding: 20px;
+    border: 1px solid $grey_dark;
+    padding: 10px;
     width: 100%;
-        max-width: 400px;
+        max-width: 500px;
 
     h5 {
         margin: 0;
     }
 
     input, textarea {
-        background: $navy_light_10;
-        border: 1px solid $navy_light_75;
-        color: $navy_dark_25; 
+        background: $grey_light;
+        border: 1px solid $grey_dark;
+        color: #000; 
 		display: block;
 		font-size: 0.9em;
         margin: 10px 0;
@@ -121,9 +116,14 @@ form {
         width: 100%;
 
         &::placeholder {
-            color: $navy_dark_25; 
+            color: #000; 
         }
-	}
+    }
+    
+    label {
+        position: absolute;
+        right: -200vw;
+    }
 	
 	textarea {
 		height: 150px;
@@ -132,8 +132,8 @@ form {
 
 button, .btn, input[type="submit"] {
     background: none;
-    border: 2px solid $navy_dark_50;
-    color: $navy_dark_50;
+    border: 2px solid $grey_dark;
+    color: $grey_dark;
     cursor: pointer;
 	display: inline-block;
 	font-size: 1em;
@@ -143,28 +143,40 @@ button, .btn, input[type="submit"] {
     text-transform: uppercase;
 
     &:active, &:hover, &:focus {
-        background: $navy_dark_50;
+        background: $grey_dark;
         color: #fff;
     }
 }
 
-.sr {
-    position: fixed;
-        right: -500px;
-}
-
-.image-container {
-	overflow: hidden;
-
-	img {
-		height: 100%;
-		max-width: 100%;
-		min-width: 100%;
-	}
-}
-
 @media (min-width: 40rem) {
+    h1 {
+        font-size: 3em;
+    }
+
     h2 {
         font-size: 2em;
+    }
+
+    blockquote {
+        font-size: 2em;
+        margin: 1em 40px;
+    }
+
+    form {
+        padding: 20px;
+    }
+}
+
+@media (min-width: 60rem) {
+    h1 {
+        font-size: 4em;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+
+    blockquote {
+        font-size: 3em;
     }
 }
