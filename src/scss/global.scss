@@ -25,9 +25,20 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-    color: #000;
+    color: $grey_dark;
     font-size: 2em;
     padding: 0 10px;
+    
+    &:after {
+        border-bottom: 2px solid #000;
+        content: '';
+        display: block;
+        margin: 0 auto;
+        position: relative;
+            top: 10px;
+        width: 100%;
+            max-width: 500px;
+    }
 }
 
 h2 {
@@ -151,6 +162,13 @@ button, .btn, input[type="submit"] {
 @media (min-width: 40rem) {
     h1 {
         font-size: 3em;
+
+        &:after {
+            border-bottom-width: 2.5px;
+            top: 20px;
+            width: 90vw;
+                max-width: 780px;
+        }
     }
 
     h2 {
@@ -170,6 +188,12 @@ button, .btn, input[type="submit"] {
 @media (min-width: 60rem) {
     h1 {
         font-size: 4em;
+
+        &:after {
+            border-bottom-width: 3px;
+            width: 90vw;
+                max-width: 1000px;
+        }
     }
 
     h2 {
