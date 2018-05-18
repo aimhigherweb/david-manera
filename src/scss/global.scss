@@ -7,7 +7,6 @@
     src: url('../fonts/Slabo27px-Regular.ttf') format('truetype');
 }
 
-
 * {
 	box-sizing: border-box;
 }
@@ -89,7 +88,7 @@ figcaption {
 .icon {
     cursor: pointer;
     height: $icon-size;
-    margin: 20px;
+    margin: 10px;
     stroke: $grey_dark;
     width: $icon-size;
 }

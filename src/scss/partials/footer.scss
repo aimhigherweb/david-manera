@@ -1,1 +1,56 @@
 @import '../variables.scss';
+
+
+footer {
+    background: #000;
+    display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    height: 160px;;
+
+    > * {
+        flex: 0 1 200px;
+    }
+
+    img {
+        border: 3px solid #000;
+        flex: 0 0 auto;
+        height: 160px;
+        width: auto;
+    }
+
+    small {
+        flex: 1 0 100%;
+        font-weight: bold;
+        text-align: right;
+    }
+
+    .icon {
+        stroke: $grey_light;
+    }
+
+    .contact-info {
+        display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        padding-right: 20px;
+
+        a {
+            color: $grey_light;
+            display: flex;
+            align-items: center;
+
+            &:active, &:hover, &:focus {
+                color: $purple;
+
+                span, address {
+                    color: $purple;
+                }
+
+                .icon {
+                    stroke: $purple;
+                }
+            }
+        }
+    }
+}
