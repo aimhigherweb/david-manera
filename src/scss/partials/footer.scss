@@ -6,7 +6,10 @@ footer {
     display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-    height: 160px;;
+    height: 160px;
+    margin: 0 auto;
+    width: 90vw;
+        max-width: 1200px;
 
     > * {
         flex: 0 1 200px;
@@ -22,6 +25,7 @@ footer {
     small {
         flex: 1 0 100%;
         font-weight: bold;
+        margin-top: 20px;
         text-align: right;
     }
 
