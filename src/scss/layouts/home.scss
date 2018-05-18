@@ -2,9 +2,9 @@
 .content {
     background: #000;
     color: $grey_light;
-    font-size: 20px;
-    margin: 50px auto;
-    padding: 30px;
+    font-size: 13px;
+    margin: 20px auto;
+    padding: 15px;
     width: 90vw;
         max-width: 1200px;
 
@@ -25,5 +25,33 @@
         span {
             color: $grey_light;
         }
+    }
+
+    button, .btn, input[type="submit"] {
+        background: none;
+        border: 2px solid $grey_light;
+        color: $grey_light;
+
+        &:active, &:hover, &:focus {
+            background: $grey_light;
+            color: #000;
+        }
+    }
+    
+}
+
+@media (min-width: 40rem) {
+    .content {
+        font-size: 16px;
+        margin: 50px auto;
+        padding: 30px;
+    }
+}
+
+@media (min-width: 60rem) {
+    .content {
+        font-size: 20px;
+        margin: 50px auto;
+        padding: 30px;
     }
 }

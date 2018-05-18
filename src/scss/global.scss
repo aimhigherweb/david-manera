@@ -26,12 +26,13 @@ h1, h2, h3, h4, h5 {
 
 h1 {
     color: #000;
-    font-size: 4em;
+    font-size: 2em;
+    padding: 0 10px;
 }
 
 h2 {
     color: $grey_light;
-    font-size: 2.5em;
+    font-size: 1.5em;
     margin-top: 0;
 }
 
@@ -47,7 +48,8 @@ blockquote {
     border: none;
     color: $grey_dark;
     font: $font_headings;
-    font-size: 3em;
+    font-size: 1.2em;
+    margin: 0.1em 10px;
     text-align: center;
 }
 
@@ -95,7 +97,7 @@ figcaption {
 
 form {
     border: 1px solid $grey_dark;
-    padding: 20px;
+    padding: 10px;
     width: 100%;
         max-width: 500px;
 
@@ -116,7 +118,12 @@ form {
         &::placeholder {
             color: #000; 
         }
-	}
+    }
+    
+    label {
+        position: absolute;
+        right: -200vw;
+    }
 	
 	textarea {
 		height: 150px;
@@ -138,5 +145,38 @@ button, .btn, input[type="submit"] {
     &:active, &:hover, &:focus {
         background: $grey_dark;
         color: #fff;
+    }
+}
+
+@media (min-width: 40rem) {
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    blockquote {
+        font-size: 2em;
+        margin: 1em 40px;
+    }
+
+    form {
+        padding: 20px;
+    }
+}
+
+@media (min-width: 60rem) {
+    h1 {
+        font-size: 4em;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+
+    blockquote {
+        font-size: 3em;
     }
 }
