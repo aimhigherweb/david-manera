@@ -62,6 +62,7 @@ export class App extends Component {
 	render() {
 		return (
 			<Fragment>
+				<Meta />
 				<Header />
 				<Home />
 				<Footer />
