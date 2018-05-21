@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import ReactDOM from 'react-dom';
+import {render} from 'react-snapshot';
+
 
 //Import components
 import { App } from './js/partials/app.js';
@@ -15,4 +17,4 @@ class Main extends React.Component {
 	}
 }
 
-ReactDOM.render(<Main />, document.getElementById('root'));
+render(<Main />, document.getElementById('root'));
