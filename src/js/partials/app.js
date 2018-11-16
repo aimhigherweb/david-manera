@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 
 //Resources
 import '../../scss/content.scss';
-import favicons from '../../img/favicons/*';
+import favicon from '../../img/favicons/favicon.png';
 
 //Components
 import { Header } from './header.js';
@@ -47,12 +47,9 @@ class Meta extends Component {
 				<meta name="twitter:description" content={description} />
 				<meta name="twitter:image" content={image} />
 
-				<link rel="shortcut icon" href={favicons['favicon.png']} />
-				<link rel="icon" type="image/png" sizes="16x16" href={favicons['favicon-16.png']} />
-				<link rel="icon" type="image/png" sizes="32x32" href={favicons['favicon-32.png']} />
-				<link rel="icon" type="image/png" sizes="96x96" href={favicons['favicon-96.png']} />
+				<link rel="shortcut icon" href={favicon} />
 
-				<meta name="theme-color" content="#1C75BC" />
+				<meta name="theme-color" content="#404040" />
 			</Helmet>
 		);
 	}

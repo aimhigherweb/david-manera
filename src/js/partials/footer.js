@@ -2,8 +2,8 @@ import React from 'react';
 
 //Resources
 import '../../scss/partials/footer.scss';
-import Profile from '../../img/profile.jpg';
-import {Phone, Smartphone, Printer, Map, Menu, X} from 'react-feather';
+import Profile from '../../img/david.jpg';
+import {Phone, Smartphone, Printer, Map} from 'react-feather';
 
 
 
