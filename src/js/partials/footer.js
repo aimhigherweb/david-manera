@@ -32,9 +32,9 @@ const ContactInfo = () => (
 			<Smartphone className="icon" />
 			<span>0419 945 411</span>
 		</a>
-		<a href="fax:+61892212538" title="Link to contact fax number, will open in new window" target="_blank">
+		<a href="fax:+61892212358" title="Link to contact fax number, will open in new window" target="_blank">
 			<Printer className="icon" />
-			<span>08 9221 2538</span>
+			<span>08 9221 2358</span>
 		</a>
 		<a href="https://goo.gl/maps/MLgLZnpJ3kq" title="Link to Google Maps listing of office address, will open in new window" target="_blank">
 			<Map className="icon map" />
