@@ -14,8 +14,6 @@ export class Footer extends React.Component {
 				<img src={Profile} />
 				<div className="inner">
 					<ContactInfo />
-					<small>Banner image Robert Dickerson "Legal Eagles"<br/>
-					© Jennifer Dickerson/Copyright Agency, 2018</small>
 				</div>
 			</footer>
 		);

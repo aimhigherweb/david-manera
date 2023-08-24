@@ -2,7 +2,7 @@ import React from 'react';
 
 //Resources
 import '../../scss/partials/header.scss';
-import Painting from '../../img/legal-eagles.jpg';
+import Painting from '../../img/image002.jpg';
 
 
 

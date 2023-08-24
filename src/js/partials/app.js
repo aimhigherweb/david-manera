@@ -9,7 +9,7 @@ import favicon from '../../img/favicons/favicon.png';
 import { Header } from './header.js';
 import { Home } from '../layouts/home.js';
 import { Footer } from './footer.js';
-import Painting from '../../img/legal-eagles.jpg';
+import Painting from '../../img/image002.jpg';
 
 class Meta extends Component {
 	render() {
